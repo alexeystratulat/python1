@@ -6,7 +6,6 @@ def t4_1():
     print(nat.replace("FastEthernet", "GigabitEthernet"))
 t4_1()
 
-
 def t4_2():
     mac = "AAAA:BBBB:CCCC"
     print(mac.replace(":", "."))
@@ -32,19 +31,31 @@ def t4_5():
 t4_5()
 
 def t4_6():
-    print("test")
+    ospf_route = "       10.0.24.0/24 [110/41] via 10.0.13.3, 3d18h, FastEthernet0/0"
+    ospf_route = ospf_route.replace("via"," ").replace(","," ").split()
+    list = ['Prefix', 'AD/Metric', 'Next-Hop', 'Last update', 'Outbound Interface']
 
+    for i in range(len(ospf_route)):
+
+        print("{:<30}".format(list[i]), ospf_route[i])
 
 t4_6()
 
 def t4_7():
-    print("test")
+    mac = "AAAA:BBBB:CCCC"
+
+
+
+
+
 
 
 t4_7()
 
 def t4_8():
     print("test")
+
+
 
 
 t4_8()
